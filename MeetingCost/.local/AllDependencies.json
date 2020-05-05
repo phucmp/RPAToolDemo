@@ -1135,6 +1135,18 @@
           "lib/net461/UiPath.Vision.Core.dll": {},
           "lib/net461/UiPath.Vision.dll": {}
         }
+      },
+      "UiPathTeam.OutlookCalendar.Activities/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/UiPathTeam.OutlookCalendar.Activities.dll": {}
+        }
       }
     }
   },
@@ -2244,6 +2256,17 @@
         "uipath.vision.2.0.3-beta.853545.nupkg.sha512",
         "uipath.vision.nuspec"
       ]
+    },
+    "UiPathTeam.OutlookCalendar.Activities/1.0.0": {
+      "sha512": "vSYfosKHFda+93C8HNrn91SETi5nBS9OcECI8yCKqs+fUFDmtBWGoLRqz9ljIXDaRhm0aKXSAOcJHPHfzrrapg==",
+      "type": "package",
+      "path": "uipathteam.outlookcalendar.activities/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net461/UiPathTeam.OutlookCalendar.Activities.dll",
+        "uipathteam.outlookcalendar.activities.1.0.0.nupkg.sha512",
+        "uipathteam.outlookcalendar.activities.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -2253,7 +2276,8 @@
       "UiPath.Mail.Activities >= 1.8.3-beta.850998 <= 1.8.3-beta.850998",
       "UiPath.MicrosoftOffice365.Activities >= 1.1.3 <= 1.1.3",
       "UiPath.System.Activities >= 20.4.0-beta.850545 <= 20.4.0-beta.850545",
-      "UiPath.UIAutomation.Activities >= 20.4.0-beta.853586 <= 20.4.0-beta.853586"
+      "UiPath.UIAutomation.Activities >= 20.4.0-beta.853586 <= 20.4.0-beta.853586",
+      "UiPathTeam.OutlookCalendar.Activities >= 1.0.0 <= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2294,82 +2318,17 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[20.4.0-beta.853586, 20.4.0-beta.853586]"
+          },
+          "UiPathTeam.OutlookCalendar.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.0, 1.0.0]"
           }
         }
       }
     }
   },
   "logs": [
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DocumentFormat.OpenXml 2.7.2' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "DocumentFormat.OpenXml"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'ExcelNumberFormat 1.0.3' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "ExcelNumberFormat"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'MimeKit 2.1.3' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "MimeKit"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'ClosedXML 0.94.2' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "ClosedXML"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.IO.Packaging 4.0.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "System.IO.Packaging"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'BouncyCastle 1.8.2' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "BouncyCastle"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'FastMember 1.3.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "FastMember"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Graph.Core 1.12.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Microsoft.Graph.Core"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Identity.Client 2.7.1' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Microsoft.Identity.Client"
-    },
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Graph 1.12.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Microsoft.Graph"
-    },
     {
       "code": "NU1608",
       "level": "Warning",

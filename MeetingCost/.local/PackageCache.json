@@ -143,6 +143,17 @@
         "C:\\Users\\Paul.pham\\.nuget\\packages\\uipath.microsoftoffice365.activities/1.1.3\\lib/net461/UiPath.MicrosoftOffice365.dll"
       ],
       "Path": "C:\\Users\\Paul.pham\\.nuget\\packages\\uipath.microsoftoffice365.activities\\1.1.3"
+    },
+    {
+      "Package": {
+        "Id": "UiPathTeam.OutlookCalendar.Activities",
+        "Version": "1.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Paul.pham\\.nuget\\packages\\newtonsoft.json/12.0.3\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\Paul.pham\\.nuget\\packages\\uipathteam.outlookcalendar.activities/1.0.0\\lib/net461/UiPathTeam.OutlookCalendar.Activities.dll"
+      ],
+      "Path": "C:\\Users\\Paul.pham\\.nuget\\packages\\uipathteam.outlookcalendar.activities\\1.0.0"
     }
   ],
   "Conflicts": [],
@@ -573,6 +584,16 @@
           "Item2": "[2.6.0-beta.835380, )"
         }
       ]
+    },
+    "UiPathTeam.OutlookCalendar.Activities": {
+      "Id": "UiPathTeam.OutlookCalendar.Activities",
+      "Version": "1.0.0",
+      "Dependencies": [
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[12.0.2, )"
+        }
+      ]
     }
   },
   "AllPackages": [
@@ -1001,6 +1022,16 @@
         "C:\\Users\\Paul.pham\\.nuget\\packages\\uipath.vision\\2.0.3-beta.853545\\lib\\net461\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Paul.pham\\.nuget\\packages\\uipath.vision\\2.0.3-beta.853545"
+    },
+    {
+      "Package": {
+        "Id": "UiPathTeam.OutlookCalendar.Activities",
+        "Version": "1.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Paul.pham\\.nuget\\packages\\uipathteam.outlookcalendar.activities\\1.0.0\\lib\\net461\\UiPathTeam.OutlookCalendar.Activities.dll"
+      ],
+      "Path": "C:\\Users\\Paul.pham\\.nuget\\packages\\uipathteam.outlookcalendar.activities\\1.0.0"
     }
   ]
 }
