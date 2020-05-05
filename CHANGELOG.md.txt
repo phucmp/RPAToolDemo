@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Functionality to connect to Microsoft Outlook
 - Functionality to retrieve calendar activities
 - Functionality to send mail
+- Added Writeline to console
 
 ### Changed
 
