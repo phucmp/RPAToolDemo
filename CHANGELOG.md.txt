@@ -9,6 +9,8 @@ All notable changes to this project will be documented in this file.
 - Functionality to retrieve calendar activities
 - Functionality to send mail
 - Added Writeline to console
+- Formatted Email Body
+- Added Time Duration for each meeting
 
 ### Changed
 
