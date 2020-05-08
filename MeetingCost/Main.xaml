@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="899,2692" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MicrosoftOffice365.Activities;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umac="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1063,3715" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MicrosoftOffice365.Activities;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umac="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -53,25 +53,26 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence describes the logic statements to grab today's calendar and send email to direct manager" DisplayName="Main Execution Sequence - Meetings" sap:VirtualizedContainerService.HintSize="552,2527" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence describes the logic statements to grab today's calendar and send email to direct manager" DisplayName="Main Execution Sequence - Meetings" sap:VirtualizedContainerService.HintSize="1073,3550" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strApplicationID">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">68d36751-172e-4c77-b190-8d345283a7dd</Literal>
+          <Literal x:TypeArguments="x:String" Value="" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Name="strTenant">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">be32aae3-7a3a-4fdb-b71a-161014dd062d</Literal>
+          <Literal x:TypeArguments="x:String" Value="" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Name="strOffice365User">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">paul.pham@parivedasolutions.com</Literal>
+          <Literal x:TypeArguments="x:String" Value="" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:Int32" Name="billRate" />
       <Variable x:TypeArguments="x:String" Name="strOffice365Pass" />
+      <Variable x:TypeArguments="x:Int32" Name="meetingCapacity" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -79,14 +80,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetPassword sap2010:Annotation.AnnotationText="Secure encrypted password getter" DisplayName="Get Password - Login to Microsoft Account" sap:VirtualizedContainerService.HintSize="510,64" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhoaL04EDAkuMJZtdooe0TQAAAAACAAAAAAADZgAAwAAAABAAAADKx1CiJZAUihAAdqcEKPlcAAAAAASAAACgAAAAEAAAALeN6160YTDYqhSheZnxNpcQAAAAnoZruyG0A7019HAu4CDTQBQAAAAdmElQQM9qxVpX7Wbe1Pzb9RmKng==" Result="[strOffice365Pass]">
+    <ui:GetPassword sap2010:Annotation.AnnotationText="Secure encrypted password getter" DisplayName="Get Password - Login to Microsoft Account" sap:VirtualizedContainerService.HintSize="1031,66" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhoaL04EDAkuMJZtdooe0TQAAAAACAAAAAAADZgAAwAAAABAAAAAwSx74hsxXCnnXmz2mvhq6AAAAAASAAACgAAAAEAAAAAaPgzYQMpZWBeQg3BOhgnsIAAAA3UzdqEvnb0YUAAAACozcGvlIcN8UuD39w5mEUzKUPFI=" Result="[strOffice365Pass]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetPassword>
-    <Assign sap2010:Annotation.AnnotationText="Set variable of billRate to a given bill rate from SOW" DisplayName="Assign - billRates" sap:VirtualizedContainerService.HintSize="510,102" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="Set variable of billRate to a given bill rate from SOW" DisplayName="Assign - billRates" sap:VirtualizedContainerService.HintSize="1031,104" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[billRate]</OutArgument>
       </Assign.To>
@@ -99,37 +100,60 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <uma:Office365ApplicationScope Timeout="{x:Null}" sap2010:Annotation.AnnotationText="Logins into microsoft account to achieve getting calendar activities and sending them to specified recipients" ApplicationId="[strApplicationID]" AuthenticationType="InteractiveToken" DisplayName="Microsoft Office 365 Scope - Microsoft Outlook Activities" sap:VirtualizedContainerService.HintSize="510,2147" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_6" Password="[strOffice365Pass]" Services="Mail, Calendar" Tenant="[strTenant]" Username="[strOffice365User]">
+    <Assign sap2010:Annotation.AnnotationText="Set variable of meetingCapacity to total capacity allocated to meetings and non-development work" DisplayName="Assign - meetingCapacity" sap:VirtualizedContainerService.HintSize="1031,120" sap2010:WorkflowViewState.IdRef="Assign_13">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[meetingCapacity]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">2</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <uma:Office365ApplicationScope Timeout="{x:Null}" sap2010:Annotation.AnnotationText="Logins into microsoft account to achieve getting calendar activities and sending them to specified recipients" ApplicationId="[strApplicationID]" AuthenticationType="InteractiveToken" DisplayName="Microsoft Office 365 Scope - Microsoft Outlook Activities" sap:VirtualizedContainerService.HintSize="1031,3017" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_6" Password="[strOffice365Pass]" Services="Mail, Calendar" Tenant="[strTenant]" Username="[strOffice365User]">
       <uma:Office365ApplicationScope.Body>
         <ActivityAction x:TypeArguments="mg:GraphServiceClient">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Use micorosoft library methods to implement logic" DisplayName="Do - Microsoft Core Activities" sap:VirtualizedContainerService.HintSize="476,2019" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence sap2010:Annotation.AnnotationText="Use micorosoft library methods to implement logic" DisplayName="Do - Microsoft Core Activities" sap:VirtualizedContainerService.HintSize="997,2900" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="Paul" Name="name" />
+              <Variable x:TypeArguments="x:String" Name="name">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </Variable.Default>
+              </Variable>
               <Variable x:TypeArguments="s:String[]" Name="mailingList" />
               <Variable x:TypeArguments="x:String" Name="messageContent" />
-              <Variable x:TypeArguments="s:DateTime" Name="startDate">
-                <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="DateTime.Parse(DateTime.Now.ToString(&quot;MM/dd/yyyy&quot;)).AddDays(1)" />
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="s:DateTime" Name="endDate">
-                <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="startDate.AddDays(1)" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="s:DateTime" Default="[DateTime.Parse(DateTime.Now.ToString(&quot;MM/dd/yyyy&quot;)).AddDays(1)]" Name="startDate" />
+              <Variable x:TypeArguments="s:DateTime" Default="[startDate.AddDays(1)]" Name="endDate" />
               <Variable x:TypeArguments="mg:Calendar" Name="myCalendar" />
               <Variable x:TypeArguments="mg:Event[]" Name="myEvents" />
-              <Variable x:TypeArguments="x:Int32" Name="totalMeetingCost" />
+              <Variable x:TypeArguments="x:Double" Name="totalMeetingCost" />
               <Variable x:TypeArguments="x:String" Default="[&quot;Execution Completed: Your total meeting cost to the client is $&quot; + totalMeetingCost.ToString]" Name="endMessage" />
               <Variable x:TypeArguments="mg:Calendar[]" Name="myCalendars" />
-              <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Name="myMeetings">
+              <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Default="[new Dictionary(Of String, Double)]" Name="myMeetings" />
+              <Variable x:TypeArguments="x:String" Name="fullName">
                 <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Double)" ExpressionText="new Dictionary(Of String, Double)" />
+                  <Literal x:TypeArguments="x:String" Value="" />
                 </Variable.Default>
               </Variable>
+              <Variable x:TypeArguments="x:String" Name="managerEmail">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="managerName">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">Kevin</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:TimeSpan" Name="totalMeetingTime" />
+              <Variable x:TypeArguments="x:String" Name="closingContent" />
+              <Variable x:TypeArguments="x:String" Name="meetingContent" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -137,88 +161,76 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umac:GetCalendars UserEmail="{x:Null}" sap2010:Annotation.AnnotationText="Microsoft class method to get calendar" Calendars="[myCalendars]" DefaultCalendar="[myCalendar]" DisplayName="Get Calendars - User's Calendar Activities" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="GetCalendars_6">
+            <umac:GetCalendars UserEmail="{x:Null}" sap2010:Annotation.AnnotationText="Microsoft class method to get calendar" Calendars="[myCalendars]" DefaultCalendar="[myCalendar]" DisplayName="Get Calendars - User's Calendar Activities" sap:VirtualizedContainerService.HintSize="955,90" sap2010:WorkflowViewState.IdRef="GetCalendars_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </umac:GetCalendars>
-            <umac:SearchEvents SearchQuery="{x:Null}" sap2010:Annotation.AnnotationText="Microsoft class method to get all activities from calendar" Calendar="[myCalendar]" DisplayName="Search Events - In User's Calendar" EndDate="[endDate]" Events="[myEvents]" sap:VirtualizedContainerService.HintSize="434,103" sap2010:WorkflowViewState.IdRef="SearchEvents_8" MaxResults="50" ReturnRecurring="True" StartDate="[startDate]">
+            <umac:SearchEvents SearchQuery="{x:Null}" sap2010:Annotation.AnnotationText="Microsoft class method to get all activities from calendar" Calendar="[myCalendar]" DisplayName="Search Events - In User's Calendar" EndDate="[endDate]" Events="[myEvents]" sap:VirtualizedContainerService.HintSize="955,106" sap2010:WorkflowViewState.IdRef="SearchEvents_8" MaxResults="50" ReturnRecurring="True" StartDate="[startDate]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </umac:SearchEvents>
-            <ui:ForEach x:TypeArguments="mg:Event" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,685" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[myEvents]">
+            <ui:ForEach x:TypeArguments="mg:Event" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Populate a meeting dictionary with the meeting duration&#xD;&#xA;" DisplayName="For Each - event in myEvents" sap:VirtualizedContainerService.HintSize="955,534" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[myEvents]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="mg:Event">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="mg:Event" Name="meeting" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,552" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Body - Populate dictionary" sap:VirtualizedContainerService.HintSize="304,340" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="s:DateTime" Name="meetingStart" />
-                      <Variable x:TypeArguments="s:DateTime" Name="meetingEnd" />
                       <Variable x:TypeArguments="x:Double" Name="meetingDuration" />
-                      <Variable x:TypeArguments="x:String" Name="meetingTitle" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[meetingStart]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(meeting.Start.DateTime)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[meetingEnd]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(meeting.End.DateTime)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign sap2010:Annotation.AnnotationText="Set variable for the time duration of the meeting" DisplayName="Assign - meetingDuration" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_7">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Double">[meetingDuration]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:Double">[(meetingEnd - meetingStart).TotalMinutes]</InArgument>
+                        <InArgument x:TypeArguments="x:Double">[(DateTime.Parse(meeting.End.DateTime) - DateTime.Parse(meeting.Start.DateTime)).TotalMinutes]</InArgument>
                       </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign sap2010:Annotation.AnnotationText="Map key and values for meeting as key and duration as value" DisplayName="Set - Key Value for dictionary" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_9">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[meetingTitle]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[meeting.Subject]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Double">[myMeetings(meetingTitle)]</OutArgument>
+                        <OutArgument x:TypeArguments="x:Double">[myMeetings(meeting.Subject)]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:Double">[meetingDuration]</InArgument>
                       </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </Assign>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <Assign sap2010:Annotation.AnnotationText="Calculate total meeting cost from number of events and bill rates" DisplayName="Assign - totalMeetingCost" sap:VirtualizedContainerService.HintSize="434,102" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap2010:Annotation.AnnotationText="Caclulate total meeting time in minutes" DisplayName="Assign - totalMeetingTime" sap:VirtualizedContainerService.HintSize="955,91" sap2010:WorkflowViewState.IdRef="Assign_10">
               <Assign.To>
-                <OutArgument x:TypeArguments="x:Int32">[totalMeetingCost]</OutArgument>
+                <OutArgument x:TypeArguments="x:TimeSpan">[totalMeetingTime]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">[myEvents.Length * billRate]</InArgument>
+                <InArgument x:TypeArguments="x:TimeSpan">[TimeSpan.FromMinutes(myMeetings.Values.Sum())]</InArgument>
               </Assign.Value>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -226,12 +238,25 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign sap2010:Annotation.AnnotationText="Set message content for email to be sent" DisplayName="Assign - messageContent" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap2010:Annotation.AnnotationText="Calculate total meeting cost from number of events and bill rates" DisplayName="Assign - totalMeetingCost" sap:VirtualizedContainerService.HintSize="955,104" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Double">[totalMeetingCost]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Double">[totalMeetingTime.TotalMinutes * billRate / 60]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign sap2010:Annotation.AnnotationText="Set message content for email to be sent" DisplayName="Assign - messageContent" sap:VirtualizedContainerService.HintSize="955,91" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[messageContent]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[String.Format("Dear {0}, This is an automation message to remind you that you will be billing your client ${1} this week for meetings.", name, totalMeetingCost)]</InArgument>
+                <InArgument x:TypeArguments="x:String">[String.Format("&lt;html&gt;&lt;body&gt;&lt;p&gt;Hello {0},&lt;/p&gt;&lt;p&gt;I want to inform you about my meeting times and billing for today.&lt;/br&gt;I will be billing a total of &lt;strong&gt;${1}&lt;/strong&gt; for all &lt;strong&gt;{2} HOURS&lt;/strong&gt; and &lt;strong&gt;{3} MINUTES&lt;/strong&gt; of meetings.&lt;/p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/br&gt;&lt;p&gt;The following shows my meetings along with the length of the meeting:&lt;p&gt;", managerName, totalMeetingCost, totalMeetingTime.Hours, totalMeetingTime.Minutes)]</InArgument>
               </Assign.Value>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -239,12 +264,38 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <Assign sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap2010:Annotation.AnnotationText="Iterate through dictionary of events to format meetings and duration" DisplayName="Assign - meetingContent" sap:VirtualizedContainerService.HintSize="955,104" sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[meetingContent]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Join("&lt;/br&gt;", myMeetings.Select(Function(kvp) String.Format("        -  &lt;strong&gt;{1} Minutes&lt;/strong&gt; :  {0}", kvp.Key, kvp.Value)).ToArray())]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign sap2010:Annotation.AnnotationText="Closing message within email" DisplayName="Assign - closingContent" sap:VirtualizedContainerService.HintSize="955,91" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[closingContent]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[String.Format("&lt;/br&gt;&lt;/br&gt;&lt;p&gt;Please reply to this email to let me know if there are unnecessary meetings I can skip to stay within budget and sprint capacity.&lt;/p&gt;&lt;/br&gt;&lt;/br&gt;Best Regards.&lt;/br&gt;&lt;/br&gt;{0}&lt;/body&gt;&lt;/html&gt;", name)]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign sap2010:Annotation.AnnotationText="Contains all emails that this information will be sent to" DisplayName="Assign - mailingList" sap:VirtualizedContainerService.HintSize="955,104" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:String[]">[mailingList]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="s:String[]">[{strOffice365User}]</InArgument>
+                <InArgument x:TypeArguments="s:String[]">[{managerEmail}]</InArgument>
               </Assign.Value>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -252,17 +303,76 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <umam:SendMail Account="{x:Null}" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" sap2010:Annotation.AnnotationText="Microsoft class method to send mail" Body="&lt;html&gt;&#xD;&#xA;&lt;body&gt;&#xD;&#xA;&lt;font face = 'Segoe UI Light' size = '3'&gt;&#xD;&#xA;&lt;font table = 'Segoe UI Light' size = '3'&gt;&#xD;&#xA;Hello ,&#xD;&#xA;&lt;/br&gt;&#xD;&#xA;This Is Test email To ask For the way To format email body.&#xD;&#xA;&lt;/br&gt;&#xD;&#xA;&lt;/br&gt;&#xD;&#xA;Best Regards.&#xD;&#xA;&lt;/font&gt;&#xD;&#xA;&lt;/font&gt;&#xD;&#xA;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;" DisplayName="Send Mail - To Specified Recipients" sap:VirtualizedContainerService.HintSize="434,351" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHTML="True" IsDraft="False" Subject="[RPA Tool] Total Meeting Cost for the week" To="[mailingList]">
-              <umam:SendMail.Attachments>
-                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-              </umam:SendMail.Attachments>
+            <If sap2010:Annotation.AnnotationText="Decision to send a certain format of information based on capacity" Condition="[totalMeetingTime.TotalMinutes &gt; meetingCapacity * 60]" DisplayName="If - compare with capacity" sap:VirtualizedContainerService.HintSize="955,956" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </umam:SendMail>
-            <WriteLine sap2010:Annotation.AnnotationText="Output successful execution message" DisplayName="Write Line - End Microsoft Message" sap:VirtualizedContainerService.HintSize="434,103" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[endMessage]">
+              <If.Then>
+                <Sequence sap2010:Annotation.AnnotationText="Send this email format if the developer is over capacity&#xD;&#xA;" DisplayName="Sequence - Over Capacity" sap:VirtualizedContainerService.HintSize="476,776" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="importantContent" />
+                    <Variable x:TypeArguments="x:TimeSpan" Name="remainingCapacity" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="Determine capacity for development work" DisplayName="Assign - remainingCapacity" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_14">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:TimeSpan">[remainingCapacity]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:TimeSpan">[TimeSpan.FromMinutes(480 - totalMeetingTime.TotalMinutes)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <Assign sap2010:Annotation.AnnotationText="Message to notify the calculation of development work remaining" DisplayName="Assign - importantContent" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_15">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[importantContent]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[String.Format("&lt;br&gt;&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; I have a sprint development capacity of &lt;strong&gt;{0} HOURS&lt;/strong&gt;, but with these meetings, I potentially now have &lt;strong&gt;{1} HOURS&lt;/strong&gt; and &lt;strong&gt;{2} MINUTES&lt;/strong&gt; of development work", 8-meetingCapacity, remainingCapacity.Hours, remainingCapacity.Minutes)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <umam:SendMail Account="{x:Null}" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" sap2010:Annotation.AnnotationText="Microsoft class method to send mail" Body="[messageContent + meetingContent + importantContent + closingContent]" DisplayName="Send Mail - To Specified Recipients" sap:VirtualizedContainerService.HintSize="434,352" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHTML="True" IsDraft="False" Subject="[URGENT] Developer is at Risk Due to Amount of Meetings" To="[mailingList]">
+                    <umam:SendMail.Attachments>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </umam:SendMail.Attachments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </umam:SendMail>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <umam:SendMail Account="{x:Null}" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" sap2010:Annotation.AnnotationText="Microsoft class method to send mail that is not over capacity" Body="[messageContent + meetingContent + closingContent]" DisplayName="Send Mail - To Specified Recipients" sap:VirtualizedContainerService.HintSize="434,352" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHTML="True" IsDraft="False" Subject="[INFO] Developer's Total Meeting Cost and Hours for Today" To="[mailingList]">
+                  <umam:SendMail.Attachments>
+                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                  </umam:SendMail.Attachments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </umam:SendMail>
+              </If.Else>
+            </If>
+            <WriteLine sap2010:Annotation.AnnotationText="Output successful execution message" DisplayName="Write Line - End Microsoft Message" sap:VirtualizedContainerService.HintSize="955,106" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[endMessage]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
