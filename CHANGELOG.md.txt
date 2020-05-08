@@ -1,7 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
 ## [Unreleased]
+
+### Added
+
+### Changed
+
+### Removed
+
+
+
+## [Version 0.1.0] - 5/8/2020
 
 ### Added
 
@@ -10,6 +21,7 @@ All notable changes to this project will be documented in this file.
 - Functionality to send mail
 - Added capacity calculation and billings
 - Formatted Email Body based on capacity
+- Added functionality to record PDF
 
 ### Changed
 
